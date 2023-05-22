@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="may17.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        .calculator{
+            height: 300px;
+            /* border:2px solid; */
+            width:220px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        h4{
+            text-align: center;
+            margin:0;
+        }
+        .screen{
+            width: 210px;
+            border: 2px solid #3333;
+            height: 50px;
+            margin: auto;
+            border-radius: 20px;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            font-size:25px;
+            
+            white-space: nowrap;
+        }
+        
+        .buttons{
+            width: 210px;
+            /* border: 3px solid #3333; */
+            height: 200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            border-radius: 5px;
+        }
+        button{
+            font-size: 20px;
+            border: 1px solid #4444;
+            margin: 2px;
+            border-radius: 10px;
+            cursor:pointer;
+        }
+        button:active{
+            background-color: grey;
+            scale:0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <p class="heading-txt">Quiz APP</p> -->
+        <p id="timer"></p>
+        <div id="first">
+        <div class="question">
+            <span id="question-number"></span>
+            <span id="question-txt"><img/></span>
+        </div>
+        <div class="calculator">
+            <!-- <h4>Calculator</h4> -->
+            <div class="screen">
+    
+            </div>
+            <div class="buttons">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>0</button>
+                <button>C</button>
+                <button>submit</button>
+                
+            </div>
+        </div>
+    </div>
+        <input type="button" value="Next" id="next-button">
+    </div>
+    <script src="may17.js"></script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

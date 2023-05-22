@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="may17.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+         .suges{
+            /* height: 200px; */
+            display: flex;
+            /* width: 200px; */
+            margin: 40px;
+            justify-content: center;
+            background-color: rgb(160, 211, 79);
+            font-size: larger;
+           
+            align-items: center;
+        }
+        .poi{
+            background-color: rgb(108, 196, 237);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            font-size: larger;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="heading-txt">Your Score</p>
+        <h1 id="score"></h1>
+        <script>
+            let score = localStorage.getItem("score");
+            document.getElementById("score").innerHTML=score;
+        </script>
+        <div class="suges">Colour Blindness Percentage<div class="poi"></div>
+        <script>
+            let suges=document.querySelector(".suges")
+            let p = ""
+            let vafr= (score/17)*100;
+            let per = 100 - vafr;
+            p= per
+            let v="";
+            v=per.toFixed(2)
+            console.log(v)
+            
+            let poi = document.querySelector(".poi")
+            poi.innerHTML=v
+            
+            
+        </script>
+
+        
+    </div>
+    <!-- <div class="suges">Colour Blinness Percentage<div class="poi"></div>
+    
+        <script>
+            let suges=document.querySelector(".suges")
+            let p = ""
+            let vafr= (score/4)*100;
+            console.log(vafr)
+            let per = 100 - vafr;
+            p= per
+            let poi = document.querySelector(".poi")
+            poi.innerHTML=p
+            
+            
+        </script>
+    </div> -->
+   
+</body>
+</html>
